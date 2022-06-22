@@ -8,7 +8,17 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>hello {{ $user }}</h1>
+    {{-- dato che passo alla view l'array associativo $data basta richiamare la $key per visualizzarne i dati --}}
+    {{-- <h1>hello {{ $user }}</h1> --}}
+    <ul class="nav justify-content-center">
+        <li class="nav-item">
+          <a class="nav-link" aria-current="page" href="{{ Route('home') }}">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="{{ Route('about') }}">About US</a>
+        </li>
+      </ul>
 
+      <h2 class="text-center">Ciao {{ $user }}</h2>
 </body>
 </html>
