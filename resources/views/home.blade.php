@@ -20,5 +20,23 @@
       </ul>
 
       <h2 class="text-center">Ciao {{ $user }}</h2>
+
+      <h3>Colori preferiti:</h3>
+      <ul>
+        @foreach ($colors as $color)
+            <li>  {{ $color }} </li>
+        @endforeach
+      </ul>
+      <h3>Records:</h3>
+      <ul>
+         @if ($records != null)
+          @foreach ($records as $record )
+             <li>{{ $record }}</li>
+          @endforeach
+      @else
+          <h5>Nessun record trovato</h5>
+      @endif
+      </ul>
+
 </body>
 </html>
